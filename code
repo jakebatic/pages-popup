@@ -9,8 +9,9 @@
 </div>
 
 <button onclick="openDevelopmentPagesModule()" class="development-pages-button">
-  <svg class="icon icon-development-pages" viewBox="0 0 384 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M64 0C28.7 0 0 28.7 0 64V448C0 483.3 28.7 512 64 512H320C355.3 512 384 483.3 384 448V160H256C238.3 160 224 145.7 224 128V0H64ZM256 0V128H384L256 0ZM112 256H272C280.8 256 288 263.2 288 272C288 280.8 280.8 288 272 288H112C103.2 288 96 280.8 96 272C96 263.2 103.2 256 112 256ZM112 320H272C280.8 320 288 327.2 288 336C288 344.8 280.8 352 272 352H112C103.2 352 96 344.8 96 336C96 327.2 103.2 320 112 320ZM112 384H272C280.8 384 288 391.2 288 400C288 408.8 280.8 416 272 416H112C103.2 416 96 408.8 96 400C96 391.2 103.2 384 112 384Z" fill="white"/>
+  <svg class="icon icon-development-pages" viewBox="0 0 683 910" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M454.445 225.473H568.589C631.375 225.473 682.734 225.419 682.734 225.366C682.734 225.232 457.828 3.12119 455.857 1.28049L454.445 0V225.473Z" fill="white"/>
+    <path d="M0 910H683V283.361H397.44V0.320119H0V910ZM511.451 511.982H169.951V455.427H511.451V511.982ZM511.451 626.159H169.951V569.07H511.451V626.159ZM511.451 739.802H169.951V683.247H511.451V739.802Z" fill="white"/>
   </svg>
 </button>
 
@@ -34,6 +35,8 @@
     width: 26px;
     min-width: 26px;
     max-width: 26px;
+    margin-left: 2px;
+    margin-bottom: 1px;
   }
   .development-pages-module {
     display: none;
