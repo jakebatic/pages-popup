@@ -3,7 +3,47 @@
 
     {% for link in linklists['development-menu'].links %}
       <li>
-        <a href="{{ link.url }}" class="development-pages-module--link {% if link.url == request.path %}development-pages-module--current{% endif %}">{{ link.title }}</a>
+        <a href="{{ link.url }}" class="development-pages-module--link {% if link.url == request.path %}development-pages-module--current{% endif %}">
+          {{ link.title }}
+          <span style="font-size: 10px; opacity: 0.65;">&nbsp;
+            {% assign link_type = '' %}
+            {% if link.object_type == 'product' %}
+              [PRODUCT]
+            {% elsif link.object_type == 'collection' %}
+              [COLLECTION]
+            {% elsif link.object_type == 'page' %}
+              [PAGE]
+            {% elsif link.object_type == 'blog' %}
+              [BLOG]
+            {% elsif link.object_type == 'article' %}
+              [ARTICLE]
+            {% elsif link.object_type == 'frontpage' %}
+              [HOME]
+            {% elsif link.object_type == 'search' %}
+              [SEARCH]
+            {% elsif link.object_type contains 'account' %}
+              [ACCOUNT]
+            {% else %}
+              {% if link.url == '/' %}
+                [HOME]
+              {% elsif link.url contains '/products/' %}
+                [PRODUCT]
+              {% elsif link.url contains '/collections/' %}
+                [COLLECTION]
+              {% elsif link.url contains '/pages/' %}
+                [PAGE]
+              {% elsif link.url contains '/blogs/' %}
+                [BLOG]
+              {% elsif link.url contains '/articles/' %}
+                [ARTICLE]
+              {% elsif link.url contains '/account' %}
+                [ACCOUNT]
+              {% else %}
+                [OTHER]
+              {% endif %}
+            {% endif %}
+          </span>
+        </a>
       </li>
     {% endfor %}
   </ul>  
@@ -101,3 +141,4 @@
     document.addEventListener('click', closeDevelopmentPagesModule);
   });
 </script>
+
